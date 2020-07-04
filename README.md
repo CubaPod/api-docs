@@ -53,6 +53,7 @@ Los objetos que maneja la API están definidos en los siguientes tipos:
 | `twitterUrl` | `String` | URL de Twitter del podcast |
 | `applePodcastsUrl` | `String` | URL del perfil del podcast en Apple Podcasts |
 | `episodes` | `EpisodeType[]` | Listado de episodios del podcast |
+| `episodesCount` | `Int` | Cantidad de episodios del podcast |
 
 ### EpisodeType
 
