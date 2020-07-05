@@ -26,6 +26,7 @@ Los objetos que maneja la API están definidos en los siguientes tipos:
 | `slug` | `String` | Slug de la categoría |
 | `description` | `String` | Descripción de la categoría |
 | `img` | `String` | Imagen de portada de la categoría |
+| `podcastsCount` | `Int` | Cantidad de podcasts pertenecientes a la categoría |
 
 ### PodcastType
 
@@ -34,6 +35,7 @@ Los objetos que maneja la API están definidos en los siguientes tipos:
 | Campo | Tipo de dato | Descripción |
 | :--- | :--- | :--- |
 | `slug` | `String` | Slug del podcast |
+| `fullPath` | `String` | URL relativa del podcast en CubaPod |
 | `url` | `String` | URL del feed RSS del podcast |
 | `title` | `String` | Título del podcast |
 | `subtitle` | `String` | Subtítulo del podcast |
@@ -397,6 +399,71 @@ Ejemplo de datos de entrada:
       "url": "https://anchor.fm/s/164f2390/podcast/rss",
       "generator": "Anchor Podcasts"
     }
+  }
+}
+```
+{% endtab %}
+{% endtabs %}
+
+### Search
+
+El endpoint `search` permite buscar podcasts según un criterio de búsqueda.
+
+{% tabs %}
+{% tab title="Query" %}
+```graphql
+query search($criteria: String!) {
+  search(criteria: $criteria) {
+    title 
+  }
+}
+```
+
+Ejemplo de datos de entrada:
+
+```javascript
+{
+  "criteria": "Cuba"
+}
+```
+{% endtab %}
+
+{% tab title="Ejemplo de salida" %}
+```javascript
+{
+  "data": {
+    "search": [
+      {
+        "title": "ADN Cuba"
+      },
+      {
+        "title": "CUBAYERN"
+      },
+      {
+        "title": "Cubahora"
+      },
+      {
+        "title": "Cubana de La HabanaBlog"
+      },
+      {
+        "title": "Entérate Cuba"
+      },
+      {
+        "title": "Flash Musical Cuba"
+      },
+      {
+        "title": "NFL Cuba"
+      },
+      {
+        "title": "StartupCuba"
+      },
+      {
+        "title": "Top Cubano"
+      },
+      {
+        "title": "Una cubana de La Habana"
+      }
+    ]
   }
 }
 ```
