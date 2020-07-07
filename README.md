@@ -69,6 +69,11 @@ Los objetos que maneja la API están definidos en los siguientes tipos:
 | `enclosure` | `String` | URL del archivo de audio del episodio |
 | `link` | `String` | Enlace del episodio en la plataforma original |
 | `image` | `String` | Imagen de portada del episodio |
+| `itunesSeason` | `String` | El número de la temporada |
+| `itunesEpisode` | `String` | El número del episodio |
+| `itunesEpisodeType` | `String` | El tipo de episodio |
+| `itunesExplicit` | `String` | Tipo de lenguaje, explícito o no |
+| `itunesDuration` | `String` | La duración del episodio |
 
 ## Consultas GraphQL
 
