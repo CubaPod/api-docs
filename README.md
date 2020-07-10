@@ -475,6 +475,30 @@ Ejemplo de datos de entrada:
 {% endtab %}
 {% endtabs %}
 
+### Status
+
+El endpoint `status` puede utilizarse para comprobar si la API está en línea, podría ser útil en caso de downtime.
+
+{% tabs %}
+{% tab title="Query" %}
+```graphql
+query status {
+  status
+}
+```
+{% endtab %}
+
+{% tab title="Salida esperada" %}
+```javascript
+{
+  "data": {
+    "status": "ok"
+  }
+}
+```
+{% endtab %}
+{% endtabs %}
+
 ## ¿Qué hay para el futuro?
 
 La API de CubaPod se encuentra en desarrollo activo y la estamos mejorando día por día, puede ser que su esquema cambie, introduzcamos mutaciones y mucho más.
